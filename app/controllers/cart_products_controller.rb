@@ -6,7 +6,6 @@ class CartProductsController < ApplicationController
 
     def new
         @cart = current_user.carts.first_or_create # Assuming a user has only one cart
-        
         @cart_product = @cart.cart_products.find_or_initialize_by(product_id: params[:product_id])
       
         if @cart_product.new_record?
