@@ -1,0 +1,10 @@
+<h1>Your Cart</h1>
+
+<% @cart_product.each do |cart_product| %>
+  <div>
+    <h3><%= cart_product.product.title %></h3>
+    <p>Quantity: <%= cart_product.quantity %></p>
+    <p>Price: <%= cart_product.total_price %></p>
+    <!-- Add other details of the cart product -->
+  </div>
+<% end %>

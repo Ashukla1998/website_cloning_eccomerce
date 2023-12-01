@@ -12,4 +12,5 @@ class User < ApplicationRecord
         def seller?
           role == 'seller'
         end
+    has_many:carts
 end
