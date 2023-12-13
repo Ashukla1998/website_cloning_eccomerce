@@ -6,6 +6,8 @@ class User < ApplicationRecord
     has_one :cart
     has_many :products
     # has_many :cart_products
+    has_one :company_detail
+    has_one :profile
     
     def buyer?
       role == 'buyer'
@@ -14,4 +16,6 @@ class User < ApplicationRecord
     def seller?
       role == 'seller'
     end
+
+    validates :email, :role, presence: true
 end
